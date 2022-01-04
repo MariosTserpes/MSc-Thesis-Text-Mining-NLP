@@ -1,1 +1,4 @@
-
+Datasets can be found in two .csv files
+1) Fake.csv
+2) True.csv
+LINK :  [https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset]
