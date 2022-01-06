@@ -21,18 +21,12 @@ print(dataset.isnull().sum())
 
 def plot_data(column, plot_title, input_xlabel):
     fig4, ax4 =  plt.subplots(1,1, figsize=(10, 6))
-
     array = dataset[column].value_counts().sort_values(ascending = False)
-
-    ax4.bar(array.index, array, width = 0.7,
-           edgecolor = 'black', color = 'purple', 
-           linewidth = 0.1, alpha = 0.4)
-
+    ax4.bar(array.index, array, width = 0.7, edgecolor = 'black', color = 'purple',  linewidth = 0.1, alpha = 0.4)
     for i in array.index:
-        ax4.annotate(f"{array[i]}",
-                xy=(i, array[i] + 120),
-                   va = 'center', ha='center',fontweight='light', 
-                   color='black', fontsize = 13)
+        ax4.annotate(f"{array[i]}",  xy=(i, array[i] + 120),
+                        va = 'center', ha='center',fontweight='light', 
+                        color='black', fontsize = 13)
     ax4.set_title(plot_title, fontsize = 20)
     ax4.set(ylabel = 'Count_News', xlabel = input_xlabel)
     plt.xticks(rotation = 45, fontweight = 'bold')
