@@ -1,4 +1,6 @@
 import pandas as pd 
+
+import plotly.express as px #pip install plotly
 import matplotlib.pyplot as plt
 import seaborn as sns
 import matplotlib
