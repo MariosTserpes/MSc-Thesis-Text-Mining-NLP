@@ -47,3 +47,13 @@ def plot_length(input_variable):
     
 plot_length('text')    
 plot_length('title')
+
+
+def boxplots(input_variable):
+    fig = px.box(dataset,  
+                 x = "Category", 
+                 y = dataset[input_variable].astype(str).apply(len))
+    fig.show()
+    
+boxplots('text')
+boxplots('title')
