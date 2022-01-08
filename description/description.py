@@ -57,3 +57,6 @@ def boxplots(input_variable):
     
 boxplots('text')
 boxplots('title')
+
+#The merged_set.csv will be utilized for generating wordclouds and cleansing data
+dataset.to_csv('merged_set.csv')
