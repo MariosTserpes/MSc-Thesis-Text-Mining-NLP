@@ -33,3 +33,15 @@ def plot_data(column, plot_title, input_xlabel):
     
 plot_data('subject', 'Number of News', 'Subject')
 plot_data('Category', 'Number of Fake and Real News', 'Category')
+
+
+
+#A function which visualize lenght of corpora, passing as parameter the name of column as string
+def plot_length(input_variable):
+    fig = px.histogram(dataset, 
+                   x = dataset[input_variable].astype(str).apply(len),
+                   color="Category")
+    fig.show()
+    
+plot_length('text')    
+plot_length('title')
