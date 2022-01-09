@@ -58,5 +58,17 @@ def boxplots(input_variable):
 boxplots('text')
 boxplots('title')
 
+
+#A function in order to calculate the number for each statement
+def plot_word_count(input_variable):
+    fig = px.histogram(dataset,
+                       x = dataset[input_variable].apply(lambda x: len(str(x).split())), 
+                       color = 'Category')
+    fig.show()
+    
+plot_word_count('text')
+plot_word_count('title')
+
+
 #The merged_set.csv will be utilized for generating wordclouds and cleansing data
-dataset.to_csv('merged_set.csv')
+#dataset.to_csv('merged_set.csv')
