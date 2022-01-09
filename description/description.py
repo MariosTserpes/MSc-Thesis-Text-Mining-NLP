@@ -71,7 +71,7 @@ plot_word_count('title')
 
 
 #Descriptive Statistics for word_count
-def descriptine_statistics_word_count(input_variable, news_category):
+def descriptive_statistics_word_count(input_variable, news_category):
     #1. input_variable : Input 'text' or 'title'
     #2. news_category  : Input 'Fake_News' or 'Real_News'
     subset = dataset[dataset['Category'] == news_category]
@@ -79,12 +79,12 @@ def descriptine_statistics_word_count(input_variable, news_category):
     print(f'Descrptive Statistics for {input_variable} variable and {news_category} category:\n {descriptive_stats}')
   
 # For text
-descriptine_statistics_word_count('text', 'Fake_News')
-descriptine_statistics_word_count('text', 'Real_News')
+descriptive_statistics_word_count('text', 'Fake_News')
+descriptive_statistics_word_count('text', 'Real_News')
 
 #For title
-descriptine_statistics_word_count('title', 'Fake_News')
-descriptine_statistics_word_count('title', 'Real_News')
+descriptive_statistics_word_count('title', 'Fake_News')
+descriptive_statistics_word_count('title', 'Real_News')
 
 #The merged_set.csv will be utilized for generating wordclouds and cleansing data
 #dataset.to_csv('merged_set.csv')
