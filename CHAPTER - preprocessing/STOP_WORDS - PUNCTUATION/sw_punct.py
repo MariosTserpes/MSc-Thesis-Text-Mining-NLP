@@ -142,11 +142,12 @@ import re, string
 
 
 
+fake_cleaned['word_count_text'] = fake_cleaned['text_fake'].apply(lambda x: len(str(x).split()))
+fake_cleaned['word_count_title'] = fake_cleaned['title_fake'].apply(lambda x: len(str(x).split()))
 
 
-
-
-
+real_cleaned['word_count_text'] = real_cleaned['text_real'].apply(lambda x: len(str(x).split()))
+real_cleaned['word_count_title'] = real_cleaned['title_real'].apply(lambda x: len(str(x).split()))
 
 
 
