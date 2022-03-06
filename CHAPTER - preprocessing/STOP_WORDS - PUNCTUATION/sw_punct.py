@@ -71,3 +71,87 @@ real_cleaned = pd.concat([text_real, title_real, real_news['Category'][:500]], a
 #Cleaned Datasets
 #fake_cleaned.to_csv('fake_cleaned.csv')
 #real_cleaned.to_csv('real_cleaned.csv')
+
+
+
+
+import pandas as pd
+from gensim.parsing.porter import PorterStemmer
+import re, string
+
+
+
+# p = PorterStemmer()
+
+# for i in range(len(fake_cleaned['text_fake'].values)):
+
+#     words = fake_cleaned['text_fake'].values[i].split()
+#     filtered_list = []
+#     for word in words:
+#         pattern = re.compile('[^\u0000-\u007F]+', re.UNICODE)  #Remove all non-alphanumeric characters
+#         word = pattern.sub('', word)
+#         word = word.translate(str.maketrans('', '', string.punctuation))
+#         filtered_list.append(word)
+#         result = ' '.join(filtered_list)
+        
+#     fake_cleaned['text_fake'].values[i] = result      #if there is no text, use title
+    
+#     fake_cleaned['text_fake'].values[i] = p.stem_sentence( fake_cleaned['text_fake'].values[i])
+
+
+
+
+
+#p = PorterStemmer()
+
+# for i in range(len(fake_cleaned['title_fake'].values)):
+
+#     words = fake_cleaned['title_fake'].values[i].split()
+#     filtered_list = []
+#     for word in words:
+#         pattern = re.compile('[^\u0000-\u007F]+', re.UNICODE)  #Remove all non-alphanumeric characters
+#         word = pattern.sub('', word)
+#         word = word.translate(str.maketrans('', '', string.punctuation))
+#         filtered_list.append(word)
+#         result = ' '.join(filtered_list)
+        
+#     fake_cleaned['title_fake'].values[i] = result      #if there is no text, use title
+    
+#     fake_cleaned['title_fake'].values[i] = p.stem_sentence( fake_cleaned['title_fake'].values[i])
+
+
+
+
+
+# p = PorterStemmer()
+
+# for i in range(len(real_cleaned['text_real'].values)):
+
+#     words = real_cleaned['text_real'].values[i].split()
+#     filtered_list = []
+#     for word in words:
+#         pattern = re.compile('[^\u0000-\u007F]+', re.UNICODE)  #Remove all non-alphanumeric characters
+#         word = pattern.sub('', word)
+#         word = word.translate(str.maketrans('', '', string.punctuation))
+#         filtered_list.append(word)
+#         result = ' '.join(filtered_list)
+        
+#     real_cleaned['text_real'].values[i] = result      #if there is no text, use title
+    
+#     real_cleaned['text_real'].values[i] = p.stem_sentence( real_cleaned['text_real'].values[i])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
