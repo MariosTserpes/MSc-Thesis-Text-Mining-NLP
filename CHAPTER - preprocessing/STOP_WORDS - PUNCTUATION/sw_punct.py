@@ -152,7 +152,12 @@ real_cleaned['word_count_title'] = real_cleaned['title_real'].apply(lambda x: le
 
 
 
+fake_cleaned['characters_length_text'] = fake_cleaned['text_fake'].astype(str).apply(len)
+fake_cleaned['characters_length_title'] = fake_cleaned['title_fake'].astype(str).apply(len)
 
+
+real_cleaned['characters_length_text'] = real_cleaned['text_real'].astype(str).apply(len)
+real_cleaned['characters_length_title'] = real_cleaned['title_real'].astype(str).apply(len)
 
 
 
