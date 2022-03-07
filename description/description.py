@@ -88,3 +88,70 @@ descriptive_statistics_word_count('title', 'Real_News')
 
 #The merged_set.csv will be utilized for generating wordclouds and cleansing data
 #dataset.to_csv('merged_set.csv')
+
+
+
+corpus_1 = []
+corpus_2 = []
+corpus_3 = []
+corpus_4 = []
+
+
+fake_text = fake_cleaned['text_fake'].str.split().values.tolist()
+real_text = real_cleaned['text_real'].str.split().values.tolist()
+
+
+fake_title = fake_cleaned['title_fake'].str.split().values.tolist()
+real_title = real_cleaned['title_real'].str.split().values.tolist()
+
+corpus_1 = [word for i in fake_text  for word in i]
+corpus_2 = [word for i in real_text  for word in i]
+corpus_3 = [word for i in fake_title  for word in i]
+corpus_4 = [word for i in real_title  for word in i]
+
+from collections import Counter
+stop=set(stopwords.words('english'))
+
+counter_1 = Counter(corpus_1)
+
+most_1 = counter_1.most_common()
+x, y= [], []
+for word,count in most_1[:25]:
+    if (word not in stop):
+        x.append(word)
+        y.append(count)
+sns.barplot(x=y,y=x)
+
+
+counter_2 = Counter(corpus_2)
+
+most_2 = counter_2.most_common()
+xx, yy= [], []
+for word,count in most_2[:25]:
+    if (word not in stop):
+        xx.append(word)
+        yy.append(count)
+        
+sns.barplot(x=yy,y=xx)
+
+counter_3 = Counter(corpus_3)
+
+most_3 = counter_3.most_common()
+xxx, yyy= [], []
+for word,count in most_3[:5]:
+    if (word not in stop):
+        xxx.append(word)
+        yyy.append(count)
+sns.barplot(x=yyy,y=xxx)
+
+
+counter_4 = Counter(corpus_4)
+
+most_4 = counter_4.most_common()
+xxxx, yyyy= [], []
+for word,count in most_4[:5]:
+    if (word not in stop):
+        xxxx.append(word)
+        yyyy.append(count)
+        
+sns.barplot(x=yyyy,y=xxxx)
